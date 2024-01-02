@@ -8,8 +8,14 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(add(-1,-1), -2)
 
     def test_greet(self):
-        self.assertEqual(greet(),"Hello!")
-        self.assertNotEqual(greet(), "")
+        # Capture the output of greet() using an io.StringIO object
+        capturedOutput = io.StringIO()
+        sys.stdout = capturedOutput
+        greet()
+        sys.stdout = sys.__stdout__
+
+        # Check if "Hello!\n" was printed (note the newline character)
+        self.assertEqual(capturedOutput.getvalue(), "Hello!\n")
 
 if __name__ == "__main__":
     unittest.main()
