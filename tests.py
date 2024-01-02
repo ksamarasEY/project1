@@ -7,5 +7,9 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(add(-1,1), 0)
         self.assertEqual(add(-1,-1), -2)
 
+    def test_greet(self):
+        self.assertEqual(greet(),"Hello!")
+        self.assertNotEqual(greet(), "")
+
 if __name__ == "__main__":
     unittest.main()
