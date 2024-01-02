@@ -1,5 +1,7 @@
 import unittest
-from app import add
+import io
+import sys
+from app import add, greet
 
 class TestAdd(unittest.TestCase):
     def test_add(self):
