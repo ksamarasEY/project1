@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: konstsamaras/python-app:latest
+        image: konstsamaras/python-app:v2
+        command: [ "/bin/sh", "-c", "--" ]
+        args: [ "while true; do sleep 10; done;" ]
         ports:
         - containerPort: 80
