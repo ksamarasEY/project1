@@ -9,6 +9,11 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(add(-1,1), 0)
         self.assertEqual(add(-1,-1), -2)
 
+    def test_sub(self):
+        self.assertEqual(sub(2,1), 1)
+        self.assertEqual(sub(1,1), 0)
+        self.assertEqual(sub(-1,-1), 0)
+
     def test_greet(self):
         # Capture the output of greet() using an io.StringIO object
         capturedOutput = io.StringIO()
