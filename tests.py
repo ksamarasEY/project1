@@ -1,7 +1,7 @@
 import unittest
 import io
 import sys
-from app import add, greet
+from app import add, greet, sub 
 
 class TestAdd(unittest.TestCase):
     def test_add(self):
