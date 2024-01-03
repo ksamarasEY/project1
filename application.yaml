@@ -11,7 +11,7 @@ spec:
     path: myapp
   destination:
     server: 'https://kubernetes.default.svc'
-
+  insecure: true
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
