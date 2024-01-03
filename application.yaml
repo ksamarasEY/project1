@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/ksamarasEY/project1.git'
     targetRevision: HEAD
-    path: .
+    path: myapp
   destination:
     server: 'https://kubernetes.default.svc'
 
