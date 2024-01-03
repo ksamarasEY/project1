@@ -22,7 +22,7 @@ jobs:
         
     - name: Run Tests
       run: |
-        python tests.py
+        python ./myapp/tests.py
     
     - name: Login to DockerHub
       uses: docker/login-action@v1 
