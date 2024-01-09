@@ -14,12 +14,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      
+    - name: 'Create release'
+      uses: 'ncipollo/release-action@v1'
+        with:
+          allowUpdates: true
+          makeLatest: true
+          name: 'MyApp-${{ github.event.inputs.version }}'
+          tag: '${{ github.event.inputs.version }}'
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
-      with:
-        tag_name: ${{ github.event.inputs.version }}
-        release_name: Release ${{ github.event.inputs.version }}
