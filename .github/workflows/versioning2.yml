@@ -15,18 +15,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up environment
-      run: |
-        # Add your commands for setting up the environment here
-
-    - name: Build
-      run: |
-        # Add your commands for building your project here
-
-    - name: Test
-      run: |
-        # Add your commands for testing your project here
-
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
